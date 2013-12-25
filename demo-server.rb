@@ -42,8 +42,10 @@ get "/oauth/callback" do
   puts "OAUTH CALLBACK"
   puts "request.url: #{request.url}"
   puts "request.body: #{request.body.read}"
-  access_token = Pocket.get_access_token(session[:code], :redirect_uri => CALLBACK_URL)
-  session[:access_token] = access_token
+  result = Pocket.get_result(session[:code], :redirect_uri => CALLBACK_URL)
+  session[:access_token] = result['access_token']
+	puts result['access_token']
+	puts result['username']
   puts "session: #{session}"
   redirect "/"
 end
