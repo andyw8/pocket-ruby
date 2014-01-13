@@ -16,8 +16,6 @@ Just clone the repo here and refer to the demo-server.rb file for examples on ho
 	ruby demo-server.rb
 ```
 
-Alternatively, you can use it via the gem through bundler. Or through normal ```gem install pocket-ruby```
+Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby```
 
-```
-	gem 'pocket-ruby', '~> 0.0.4'
-```
+Or via bundler, ```gem 'pocket-ruby', '~> 0.0.4'```
