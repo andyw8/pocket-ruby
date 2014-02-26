@@ -18,7 +18,7 @@ end
 get "/" do
   puts "GET /"
   puts "session: #{session}"
-  
+
   if session[:access_token]
     '
 <a href="/add?url=http://geknowm.com">Add Geknowm</a>
@@ -42,10 +42,8 @@ get "/oauth/callback" do
   puts "OAUTH CALLBACK"
   puts "request.url: #{request.url}"
   puts "request.body: #{request.body.read}"
-  result = Pocket.get_result(session[:code], :redirect_uri => CALLBACK_URL)
-  session[:access_token] = result['access_token']
-	puts result['access_token']
-	puts result['username']
+  session[:access_token] = Pocket.get_access_token(session[:code])
+  puts session[:access_token]
   puts "session: #{session}"
   redirect "/"
 end
