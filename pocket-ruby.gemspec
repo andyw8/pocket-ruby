@@ -8,12 +8,12 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('faraday_middleware', '~> 0.8')
   s.add_runtime_dependency('multi_json', '>= 1.0.3', '~> 1.0')
   s.add_runtime_dependency('hashie',  '>= 0.4.0')
-  s.authors = ["Turadg Aleahmad"]
+  s.authors = ["Turadg Aleahmad","Jason Ng PT"]
   s.description = %q{A Ruby wrapper for the Pocket API v3 (Add, Modify and Retrieve)}
-  s.email = ['turadg@aleahmad.net']
+  s.email = ['turadg@aleahmad.net',"me@jasonngpt.com"]
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.files = `git ls-files`.split("\n")
-  s.homepage = 'https://github.com/Geknowm/pocket-ruby'
+  s.homepage = 'https://github.com/turadg/pocket-ruby'
   s.name = 'pocket-ruby'
   s.platform = Gem::Platform::RUBY
   s.require_paths = ['lib']
