@@ -21,7 +21,7 @@ get "/" do
 
   if session[:access_token]
     '
-<a href="/add?url=http://geknowm.com">Add Geknowm</a>
+<a href="/add?url=http://getpocket.com">Add Pocket Homepage</a>
 <a href="/retrieve">Retrieve items</a>
     '
   else
@@ -50,7 +50,7 @@ end
 
 get '/add' do
   client = Pocket.client(:access_token => session[:access_token])
-  info = client.add :url => 'http://geknowm.com'
+  info = client.add :url => 'http://getpocket.com'
   "<pre>#{info}</pre>"
 end
 
