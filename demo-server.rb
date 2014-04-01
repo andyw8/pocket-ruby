@@ -22,7 +22,7 @@ get "/" do
   if session[:access_token]
     '
 <a href="/add?url=http://getpocket.com">Add Pocket Homepage</a>
-<a href="/retrieve">Retrieve items</a>
+<a href="/retrieve">Retrieve single item</a>
     '
   else
     '<a href="/oauth/connect">Connect with Pocket</a>'
@@ -42,7 +42,12 @@ get "/oauth/callback" do
   puts "OAUTH CALLBACK"
   puts "request.url: #{request.url}"
   puts "request.body: #{request.body.read}"
-  session[:access_token] = Pocket.get_access_token(session[:code])
+  result = Pocket.get_result(session[:code], :redirect_uri => CALLBACK_URL)
+  session[:access_token] = result['access_token']
+  puts result['access_token']
+  puts result['username']	
+  # Alternative method to get the access token directly
+  #session[:access_token] = Pocket.get_access_token(session[:code])
   puts session[:access_token]
   puts "session: #{session}"
   redirect "/"
@@ -56,7 +61,7 @@ end
 
 get "/retrieve" do
   client = Pocket.client(:access_token => session[:access_token])
-  info = client.retrieve :detailType => :complete
+  info = client.retrieve(:detailType => :complete, :count => 1)
 
   # html = "<h1>#{user.username}'s recent photos</h1>"
   # for media_item in client.user_recent_media

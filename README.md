@@ -18,4 +18,4 @@ Just clone the repo here and refer to the demo-server.rb file for examples on ho
 
 Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby```
 
-Or via bundler, ```gem 'pocket-ruby', '~> 0.0.4'```
+Or via bundler, ```gem 'pocket-ruby', '~> 0.0.5'```
