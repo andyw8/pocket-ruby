@@ -1,7 +1,7 @@
 pocket-ruby
 ===========
 
-[![Code Climate](https://codeclimate.com/github/turadg/pocket-ruby.png)](https://codeclimate.com/github/Geknowm/pocket-ruby) [![Gem Version](https://badge.fury.io/rb/pocket-ruby.png)](http://badge.fury.io/rb/pocket-ruby)
+[![Code Climate](https://codeclimate.com/github/turadg/pocket-ruby.png)](https://codeclimate.com/github/turadg/pocket-ruby) [![Gem Version](https://badge.fury.io/rb/pocket-ruby.png)](http://badge.fury.io/rb/pocket-ruby)
 
 Ruby API for v3 of the [Pocket API](http://getpocket.com/developer/docs/overview) (formerly Read It Later) 
 
@@ -18,4 +18,4 @@ Just clone the repo here and refer to the demo-server.rb file for examples on ho
 
 Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby```
 
-Or via bundler, ```gem 'pocket-ruby', '~> 0.0.4'```
+Or via bundler, ```gem 'pocket-ruby', '~> 0.0.5'```
