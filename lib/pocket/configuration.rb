@@ -10,6 +10,7 @@ module Pocket
       :consumer_key,
       :access_token,
       :endpoint,
+      :redirect_uri,
       :format,
       :user_agent,
       :proxy
@@ -77,6 +78,7 @@ module Pocket
       self.consumer_key   = DEFAULT_CONSUMER_KEY
       self.access_token   = DEFAULT_ACCESS_TOKEN
       self.endpoint       = DEFAULT_ENDPOINT
+      self.redirect_uri   = DEFAULT_REDIRECT_URI
       self.format         = DEFAULT_FORMAT
       self.user_agent     = DEFAULT_USER_AGENT
       self.proxy          = DEFAULT_PROXY

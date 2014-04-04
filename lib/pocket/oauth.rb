@@ -3,15 +3,15 @@ module Pocket
   module OAuth
     # Return URL for OAuth authorization
     def authorize_url(options={})
-      params = access_token_params.merge(options)
+      params = { redirect_uri: redirect_uri }.merge(options)
       # Pocket renames `code` to `request_token` for some reason in this call
-      params[:request_token] = params[:code]
+      params[:request_token] ||= params.delete(:code)
       connection.build_url("/auth/authorize", params).to_s
     end
 
     # Return a Pocket code
     def get_code(options={})
-      params = access_token_params.merge(options)
+      params = access_token_params.merge(:redirect_uri => redirect_uri).merge(options)
       response = connection.post 'oauth/request', params
       results = Hash[URI.decode_www_form(response.body)]
       code = results['code']
