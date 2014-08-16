@@ -4,8 +4,8 @@ require File.expand_path('../lib/pocket/version', __FILE__)
 Gem::Specification.new do |s|
   s.add_development_dependency('sinatra', '~> 1.3.3')
   s.add_development_dependency('multi_xml')
-  s.add_runtime_dependency('faraday', ['>= 0.7', '< 0.9'])
-  s.add_runtime_dependency('faraday_middleware', '~> 0.8')
+  s.add_runtime_dependency('faraday', ['>= 0.7'])
+  s.add_runtime_dependency('faraday_middleware', '~> 0.9')
   s.add_runtime_dependency('multi_json', '>= 1.0.3', '~> 1.0')
   s.add_runtime_dependency('hashie',  '>= 0.4.0')
   s.authors = ["Turadg Aleahmad","Jason Ng PT"]
