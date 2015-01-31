@@ -16,6 +16,8 @@ Just clone the repo here and refer to the demo-server.rb file for examples on ho
 	ruby demo-server.rb
 ```
 
-Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby```
+Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby -g pocket```
 
-Or via bundler, ```gem 'pocket-ruby', '~> 0.0.5'```
+Or via bundler, ```gem 'pocket-ruby', '~> 0.0.5', :require => 'pocket'```
+
+Now you're good to go! Just require the gem in your code ```require 'pocket'```
