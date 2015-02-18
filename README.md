@@ -16,8 +16,16 @@ Just clone the repo here and refer to the demo-server.rb file for examples on ho
 	ruby demo-server.rb
 ```
 
-Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby -g pocket```
+Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby```
 
-Or via bundler, ```gem 'pocket-ruby', '~> 0.0.5', :require => 'pocket'```
+Or via bundler, ```gem 'pocket-ruby'```
 
-Now you're good to go! Be sure to require the gem in your code with ```require 'pocket'```
+# For v0.0.5 and earlier
+
+Using v0.0.5 and earlier may result in a ```require``` error. To fix this you may either update to a newer version of the gem or uninstall with ```gem uninstall pocket-ruby``` and try again using the method below:
+
+Install via the gem, ```gem install pocket-ruby -v 0.0.5```
+
+Or via bundler, ```gem 'pocket-ruby', '0.0.5', :require => 'pocket'```
+
+Be sure to require the gem in your code with ```require 'pocket'``` not ```require 'pocket-ruby'```
