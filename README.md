@@ -3,7 +3,7 @@ pocket-ruby
 
 Ruby API for v3 of the [Pocket API](http://getpocket.com/developer/docs/overview) (formerly Read It Later)
 
-This is a fork of turadg/pocket since it hadn't been updated since 2015.
+This is a fork of [turadg/pocket-ruby](https://github.com/turadg/pocket-ruby) since it hadn't been updated since 2015.
 
 # Usage
 
