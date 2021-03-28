@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.1.0] - 2021-03-28
+
 - Add class for parsing Article response ([#13](https://github.com/andyw8/pocket-ruby/pull/13))
 - Fix Pocket::Client::Retrieve#retrieve params default ([#12](https://github.com/andyw8/pocket-ruby/pull/12))
 
