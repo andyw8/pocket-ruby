@@ -1,5 +1,5 @@
-# Unreleased
+## [Unreleased]
 
-# v0.0.7 (2021-03-08)
+## [0.0.7] - 2021-03-28
 
-* Relax Faraday version contraint
+- Relax Faraday version constraint
