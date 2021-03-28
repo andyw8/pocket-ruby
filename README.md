@@ -18,4 +18,4 @@ Just clone the repo here and refer to the demo-server.rb file for examples on ho
 
 Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby-andyw8```
 
-Or via bundler, ```gem 'pocket-ruby-andyw8'```
+Or via bundler, ```gem 'pocket-ruby-andyw8', require: 'pocket-ruby'```
