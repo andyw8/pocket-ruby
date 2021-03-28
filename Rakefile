@@ -18,7 +18,7 @@ rescue LoadError
   # ignore
 else
   YARD::Rake::YardocTask.new do |task|
-    task.files = ["HISTORY.mkd", "LICENSE.mkd", "lib/**/*.rb"]
+    task.files = ["lib/**/*.rb"]
     task.options = [
       "--protected",
       "--output-dir", "doc/yard",

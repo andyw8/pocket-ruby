@@ -60,6 +60,7 @@ GEM
       power_assert
     tilt (1.4.1)
     unicode-display_width (2.0.0)
+    yard (0.9.26)
 
 PLATFORMS
   x86_64-darwin-19
@@ -72,6 +73,7 @@ DEPENDENCIES
   sinatra (~> 1.3.3)
   standardrb
   test-unit
+  yard
 
 BUNDLED WITH
    2.2.8
