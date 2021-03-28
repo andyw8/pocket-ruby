@@ -13,7 +13,4 @@ jobs:
         ruby-version: 2.6.6
         bundler-cache: true
     - name: Run the default task
-      run: |
-        gem install bundler -v 2.2.8
-        bundle install
-        bundle exec rake
+      run: bundle exec rake
