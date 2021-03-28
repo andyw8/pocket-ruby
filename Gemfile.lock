@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pocket-ruby-andyw8 (0.0.8)
+    pocket-ruby-andyw8 (0.1.0)
       faraday (>= 0.7)
       faraday_middleware
       multi_json (~> 1.0, >= 1.0.3)
