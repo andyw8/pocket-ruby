@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.0.8] - 2021-03-28
+
 - Remove unused Hashie dependency ([#3](https://github.com/andyw8/pocket-ruby/pull/3))
 - Prevent some Ruby warnings ([#1](https://github.com/andyw8/pocket-ruby/pull/1))
 
