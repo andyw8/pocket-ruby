@@ -15,7 +15,7 @@ module Pocket
       params = access_token_params.merge(options)
       response = connection.post 'oauth/request', params
       results = Hash[URI.decode_www_form(response.body)]
-      code = results['code']
+      results['code']
     end
 
     # Return an access token from authorization
@@ -23,14 +23,14 @@ module Pocket
       params = access_token_params.merge(:code => code).merge(options)
       response = connection.post 'oauth/authorize', params
       results = Hash[URI.decode_www_form(response.body)]
-      access_token = results['access_token']
+      results['access_token']
     end
 
     # Return result from authorization
     def get_result(code, options={})
       params = access_token_params.merge(:code => code).merge(options)
       response = connection.post 'oauth/authorize', params
-      results = Hash[URI.decode_www_form(response.body)]
+      Hash[URI.decode_www_form(response.body)]
     end
 
     private
