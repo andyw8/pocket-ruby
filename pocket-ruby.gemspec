@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.files = `git ls-files`.split("\n")
   s.homepage = 'https://github.com/turadg/pocket-ruby'
-  s.name = 'pocket-ruby'
+  s.name = 'pocket-ruby-andyw8'
   s.platform = Gem::Platform::RUBY
   s.require_paths = ['lib']
   s.required_rubygems_version = Gem::Requirement.new('>= 1.3.6') if s.respond_to? :required_rubygems_version=
