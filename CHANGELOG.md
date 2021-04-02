@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Actually remove unused Hashie dependency ([#35](https://github.com/turadg/pocket-ruby/pull/35))
+
 ## [0.0.8] - 2021-03-31
 
 - Fix Ruby warnings ([#32](https://github.com/turadg/pocket-ruby/pull/32))
