@@ -1,7 +1,7 @@
-require File.expand_path('../pocket/error', __FILE__)
-require File.expand_path('../pocket/configuration', __FILE__)
-require File.expand_path('../pocket/api', __FILE__)
-require File.expand_path('../pocket/client', __FILE__)
+require File.expand_path("../pocket/error", __FILE__)
+require File.expand_path("../pocket/configuration", __FILE__)
+require File.expand_path("../pocket/api", __FILE__)
+require File.expand_path("../pocket/client", __FILE__)
 
 module Pocket
   extend Configuration
@@ -9,7 +9,7 @@ module Pocket
   # Alias for Pocket::Client.new
   #
   # @return [Pocket::Client]
-  def self.client(options={})
+  def self.client(options = {})
     Pocket::Client.new(options)
   end
 
@@ -21,6 +21,6 @@ module Pocket
 
   # Delegate to Pocket::Client
   def self.respond_to?(method)
-    return client.respond_to?(method) || super
+    client.respond_to?(method) || super
   end
 end
