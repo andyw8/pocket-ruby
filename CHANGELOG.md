@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Fix Pocket::Client::Retrieve#retrieve params default ([#21](https://github.com/turadg/pocket-ruby/pull/21))
+
 ## [0.0.9] - 2021-04-01
 
 - Actually remove unused Hashie dependency ([#35](https://github.com/turadg/pocket-ruby/pull/35))
