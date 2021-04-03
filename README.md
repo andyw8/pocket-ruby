@@ -1,3 +1,7 @@
+IMPORTANT
+=========
+The changes made in this fork have now been added to the original at https://github.com/turadg/pocket-ruby so there's no reason to use this any more.
+
 pocket-ruby
 ===========
 
