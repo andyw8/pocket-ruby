@@ -120,6 +120,28 @@ module Pocket
       assert_equal "https://getpocket.com/read/229279689", article.read_url
     end
 
+    test "tags" do
+      assert_equal ["my-tag-1", "my-tag-2"], article.tags
+    end
+
+    test "tags returns an empty array if there are no tags" do
+      parsed_response.delete("tags")
+      assert_equal [], article.tags
+    end
+
+    test "authors" do
+      result = article.authors
+      assert_equal 1, result.size
+      assert_equal "Stephen King", result.first.name
+      assert_equal 62344201, result.first.id
+      assert_equal "https://example.com/author", result.first.url
+    end
+
+    test "authors returns an empty array if there are no tags" do
+      parsed_response.delete("authors")
+      assert_equal [], article.authors
+    end
+
     private
 
     def article

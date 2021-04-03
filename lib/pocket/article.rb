@@ -107,5 +107,13 @@ module Pocket
     def read_url
       "https://getpocket.com/read/#{item_id}"
     end
+
+    def tags
+      Hash(response["tags"]).values.map { |tag| tag["tag"] }
+    end
+
+    def authors
+      Hash(response["authors"]).values.map { |value| Pocket::Author.new(value) }
+    end
   end
 end
