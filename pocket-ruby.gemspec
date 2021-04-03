@@ -3,7 +3,6 @@ require File.expand_path("../lib/pocket/version", __FILE__)
 Gem::Specification.new do |s|
   s.add_development_dependency("sinatra", "~> 1.3.3")
   s.add_development_dependency("multi_xml")
-  s.add_development_dependency("rake")
   s.add_development_dependency("standard")
   s.add_development_dependency("test-unit")
   s.add_development_dependency("simplecov")
