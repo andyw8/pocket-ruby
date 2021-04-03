@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.1.0] - 2021-04-03
+
 - Add `Pocket::Article` for parsing an article response ([#39](https://github.com/turadg/pocket-ruby/pull/39))
 - Fix Pocket::Client::Retrieve#retrieve params default ([#21](https://github.com/turadg/pocket-ruby/pull/21))
 
