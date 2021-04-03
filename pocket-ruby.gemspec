@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency("rake")
   s.add_development_dependency("standard")
   s.add_development_dependency("test-unit")
+  s.add_development_dependency("simplecov")
   s.add_runtime_dependency("faraday", [">= 0.7"])
   s.add_runtime_dependency("faraday_middleware")
   s.add_runtime_dependency("multi_json", ">= 1.0.3", "~> 1.0")
