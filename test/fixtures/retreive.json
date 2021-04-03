@@ -38,5 +38,23 @@
             "type": "1",
             "vid": "Er34PbFkVGk"
         }
-    }
+    },
+    "tags":{
+        "bookmark":{
+           "item_id":"229279689",
+           "tag":"my-tag-1"
+        },
+        "gtd":{
+           "item_id":"229279689",
+           "tag":"my-tag-2"
+        }
+     },
+     "authors":{
+        "62344201":{
+           "item_id":"229279689",
+           "author_id":"62344201",
+           "name":"Stephen King",
+           "url":"https://example.com/author"
+        }
+     }
 }
