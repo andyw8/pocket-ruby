@@ -1,3 +1,7 @@
+NOTE
+====
+The changes made in this fork are have now been added to the original at https://github.com/turadg/pocket-ruby
+
 pocket-ruby
 ===========
 
