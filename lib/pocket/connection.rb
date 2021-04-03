@@ -1,5 +1,5 @@
 require "faraday_middleware"
-Dir[File.expand_path("../../faraday/*.rb", __FILE__)].each { |f| require f }
+Dir[File.expand_path("../../faraday/*.rb", __FILE__)].sort.each { |f| require f }
 
 module Pocket
   # @private

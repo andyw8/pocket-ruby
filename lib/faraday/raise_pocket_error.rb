@@ -11,7 +11,7 @@ module Faraday
   #
   # @see http://getpocket.com/developer/docs/authentication
   class Response::RaisePocketError < Response::Middleware
-    ClientErrorStatuses = 400...600
+    CLIENT_ERROR_STATUSES = 400...600
 
     def on_complete(env)
       case env[:status]
@@ -19,7 +19,7 @@ module Faraday
         raise Faraday::Error::ResourceNotFound, response_values(env)
       when 400...403
         raise Pocket::Error, env[:response_headers]["X-Error"]
-      when ClientErrorStatuses
+      when CLIENT_ERROR_STATUSES
         raise Faraday::Error::ClientError, response_values(env)
       end
     end

@@ -20,7 +20,7 @@ module Pocket
   end
 
   # Delegate to Pocket::Client
-  def self.respond_to?(method)
+  def self.respond_to_missing?(method)
     client.respond_to?(method) || super
   end
 end
