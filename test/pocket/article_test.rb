@@ -157,6 +157,24 @@ module Pocket
       assert_equal [], article.authors
     end
 
+    test "time_to_read" do
+      assert_equal 15, article.time_to_read
+    end
+
+    test "time_to_read with custom value" do
+      assert_equal 29, article.time_to_read(words_per_minute: 110)
+    end
+
+    test "time_to_read returns nil if word_count field not present" do
+      parsed_response.delete("word_count")
+      assert_nil article.time_to_read
+    end
+
+    test "time_to_read returns nil if word_count is 0" do
+      parsed_response["word_count"] = "0"
+      assert_nil article.time_to_read
+    end
+
     private
 
     def article
