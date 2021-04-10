@@ -64,6 +64,11 @@ module Pocket
       assert_equal 3197, article.word_count
     end
 
+    test "word_count is nil is field not present" do
+      parsed_response.delete("word_count")
+      assert_nil article.word_count
+    end
+
     test "resolved_id" do
       assert_equal 229279689, article.resolved_id
     end

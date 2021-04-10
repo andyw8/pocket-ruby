@@ -65,6 +65,7 @@ module Pocket
     end
 
     def word_count
+      return nil unless response["word_count"]
       Integer(response.fetch("word_count"))
     end
 
