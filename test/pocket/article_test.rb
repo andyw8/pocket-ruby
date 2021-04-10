@@ -99,6 +99,11 @@ module Pocket
       assert_nil article.time_read
     end
 
+    test "time_read is nil if field is zero" do
+      parsed_response["time_read"] = "0"
+      assert_nil article.time_read
+    end
+
     test "favorited?" do
       assert article.favorited?
     end
@@ -109,6 +114,11 @@ module Pocket
 
     test "time_favorited is nil if field not present" do
       parsed_response.delete("time_favorited")
+      assert_nil article.time_favorited
+    end
+
+    test "time_favorited is nil if field is zero" do
+      parsed_response["time_favorited"] = "0"
       assert_nil article.time_favorited
     end
 
