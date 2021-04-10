@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Return nil if `time_read` or `time_favorited` is '0' in the API response. Otherwise, this may be interpreted the Unix epoch (1970-01-01). ([#46](https://github.com/turadg/pocket-ruby/pull/46))
+
 ## [0.2.0] - 2021-04-03
 
 - Add support for authors and tags in `Pocket::Article` ([#44](https://github.com/turadg/pocket-ruby/pull/44))

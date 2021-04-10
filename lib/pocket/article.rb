@@ -88,6 +88,7 @@ module Pocket
 
     def time_read
       return nil unless response["time_read"]
+      return nil if response["time_read"] == "0"
       Time.at(Integer(response["time_read"])).utc
     end
 
@@ -97,6 +98,7 @@ module Pocket
 
     def time_favorited
       return nil unless response["time_favorited"]
+      return nil if response["time_favorited"] == "0"
       Time.at(Integer(response["time_favorited"])).utc
     end
 
