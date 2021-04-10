@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 - Add `time_to_read` field to `Pocket::Article`. The API does not provide this field, so it is calculated based on 220 words per minute, which should be close the duration shown in the official Pocket clients. ([#50](https://github.com/turadg/pocket-ruby/pull/50))
+- Return nil for `word_count` if not present` ([#48](https://github.com/turadg/pocket-ruby/pull/48))
 
 ## [0.2.1] - 2021-04-10
 
