@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Add `time_to_read` field to `Pocket::Article`. The API does not provide this field, so it is calculated based on 220 words per minute, which should be close the duration shown in the official Pocket clients. ([#50](https://github.com/turadg/pocket-ruby/pull/50))
+
 ## [0.2.1] - 2021-04-10
 
 - Return nil if `time_read` or `time_favorited` is '0' in the API response. Otherwise, this may be interpreted the Unix epoch (1970-01-01). ([#46](https://github.com/turadg/pocket-ruby/pull/46))
