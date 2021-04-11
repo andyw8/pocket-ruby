@@ -16,6 +16,8 @@ Just clone the repo here and refer to the demo-server.rb file for examples on ho
 	ruby demo-server.rb
 ```
 
+*Note:* Changes to the `demo-server.rb` will require a restart to take effect (or you can use [rerun](https://github.com/alexch/rerun).
+
 Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby```
 
 Or via bundler, ```gem 'pocket-ruby'```
