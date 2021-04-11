@@ -200,6 +200,10 @@ module Pocket
       assert_equal 1, article.time_to_read
     end
 
+    test "domain_metadata" do
+      assert_equal "The Verge", article.domain_metadata.name
+    end
+
     private
 
     def article

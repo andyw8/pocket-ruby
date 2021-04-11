@@ -28,4 +28,5 @@ Below are some aspects of the Pocket API that aren't covered in the official doc
 
 * For very long articles, the maximum reported `word_count` is 65535, even if the article is longer.
 * If a `count` isn't specified, the `Retreive` call will return maximum of 5000 items.
+* The API response may contain a `domain_metadata` field. This is not documented.
 
