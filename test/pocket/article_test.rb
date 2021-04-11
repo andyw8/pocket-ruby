@@ -158,46 +158,37 @@ module Pocket
     end
 
     test "time_to_read" do
-      assert_equal 15, article.time_to_read
+      assert_equal 14, article.time_to_read
     end
 
-    test "time_to_read with custom value" do
-      assert_equal 30, article.time_to_read(words_per_minute: 110)
-    end
-
-    test "time_to_read returns nil if word_count field not present" do
-      parsed_response.delete("word_count")
+    test "time_to_read returns nil if field not present" do
+      parsed_response.delete("time_to_read")
       assert_nil article.time_to_read
     end
 
-    test "time_to_read returns nil if word_count is 0" do
-      parsed_response["word_count"] = "0"
+    test "time_to_read returns nil if value is 0" do
+      parsed_response["time_to_read"] = 0
       assert_nil article.time_to_read
     end
 
     test "time_to_read_category" do
-      parsed_response.delete("word_count")
+      parsed_response.delete("time_to_read")
       assert_nil article.time_to_read_category
 
-      parsed_response["word_count"] = "0"
+      parsed_response["time_to_read"] = 0
       assert_nil article.time_to_read_category
 
-      parsed_response["word_count"] = "5000"
+      parsed_response["time_to_read"] = 25
       assert_equal "very_long", article.time_to_read_category
 
-      parsed_response["word_count"] = "3300"
+      parsed_response["time_to_read"] = 15
       assert_equal "long", article.time_to_read_category
 
-      parsed_response["word_count"] = "1800"
+      parsed_response["time_to_read"] = 8
       assert_equal "medium", article.time_to_read_category
 
-      parsed_response["word_count"] = "600"
+      parsed_response["time_to_read"] = 3
       assert_equal "quick", article.time_to_read_category
-    end
-
-    test "time_to_read returns 1 for very short articles" do
-      parsed_response["word_count"] = "1"
-      assert_equal 1, article.time_to_read
     end
 
     test "domain_metadata" do
