@@ -175,6 +175,26 @@ module Pocket
       assert_nil article.time_to_read
     end
 
+    test "time_to_read_category" do
+      parsed_response.delete("word_count")
+      assert_nil article.time_to_read_category
+
+      parsed_response["word_count"] = "0"
+      assert_nil article.time_to_read_category
+
+      parsed_response["word_count"] = "5000"
+      assert_equal "very_long", article.time_to_read_category
+
+      parsed_response["word_count"] = "3300"
+      assert_equal "long", article.time_to_read_category
+
+      parsed_response["word_count"] = "1800"
+      assert_equal "medium", article.time_to_read_category
+
+      parsed_response["word_count"] = "600"
+      assert_equal "quick", article.time_to_read_category
+    end
+
     test "time_to_read returns 1 for very short articles" do
       parsed_response["word_count"] = "1"
       assert_equal 1, article.time_to_read
