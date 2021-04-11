@@ -1,5 +1,6 @@
 ## [Unreleased]
 
+- Add `time_to_read_category` field to `Pocket::Article`. This replicates a feature [recently added to Pocket clients](https://www.theverge.com/2021/3/12/22327497/pocket-app-sort-by-reading-time-work-commute). ([#54](https://github.com/turadg/pocket-ruby/pull/54))
 - Add `time_to_read` field to `Pocket::Article`. The API does not provide this field, so it is calculated based on 220 words per minute, which should be close the duration shown in the official Pocket clients. ([#50](https://github.com/turadg/pocket-ruby/pull/50))
 - Return nil for `word_count` if not present` ([#48](https://github.com/turadg/pocket-ruby/pull/48))
 

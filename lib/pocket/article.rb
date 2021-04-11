@@ -126,5 +126,19 @@ module Pocket
       return nil if word_count == 0
       word_count.fdiv(words_per_minute).round
     end
+
+    def time_to_read_category
+      return nil if time_to_read.nil?
+
+      if time_to_read >= 21
+        'very_long'
+      elsif time_to_read >= 11
+        'long'
+      elsif time_to_read >= 6
+        'medium'
+      else
+        'quick'
+      end
+    end
   end
 end
