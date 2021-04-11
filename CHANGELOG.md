@@ -1,7 +1,7 @@
 ## [Unreleased]
 
 - Add `time_to_read` field to `Pocket::Article`. The API does not provide this field, so it is calculated based on [220 words per minute](https://www.theverge.com/2021/3/12/22327497/pocket-app-sort-by-reading-time-work-commute). ([#50](https://github.com/turadg/pocket-ruby/pull/50)) ([#51](https://github.com/turadg/pocket-ruby/pull/51))
-- Return nil for `word_count` if not present` ([#48](https://github.com/turadg/pocket-ruby/pull/48))
+- Return nil for `word_count` if not present ([#48](https://github.com/turadg/pocket-ruby/pull/48))
 
 ## [0.2.1] - 2021-04-10
 
