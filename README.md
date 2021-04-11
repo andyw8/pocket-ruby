@@ -24,7 +24,7 @@ Or via bundler, ```gem 'pocket-ruby'```
 
 ## Pocket API Notes
 
-Below are some aspects of the Pocket API that aren't covered in the official documentation, or that I have observed:
+Below are some aspects of the Pocket API that aren't covered in the official documentation, or that have been observed:
 
 * For very long articles, the maximum reported `word_count` is 65535, even if the article is longer.
 * If a `count` isn't specified, the `Retreive` call will return maximum of 5000 items.
