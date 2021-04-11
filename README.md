@@ -22,7 +22,7 @@ Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby```
 
 Or via bundler, ```gem 'pocket-ruby'```
 
-### Pocket API Notes
+## Pocket API Notes
 
 Below are some aspects of the Pocket API that aren't covered in the official documentation, but I have observed:
 
@@ -33,4 +33,3 @@ Below are some aspects of the Pocket API that aren't covered in the official doc
   * `amp_url`
   * `listen_duration_estimate`
   * `time_to_read`
-

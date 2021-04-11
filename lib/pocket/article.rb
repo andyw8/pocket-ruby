@@ -123,6 +123,11 @@ module Pocket
       Hash(response["authors"]).values.map { |value| Pocket::Author.new(value) }
     end
 
+    def domain_metadata
+      return nil unless response["domain_metadata"]
+      Pocket::DomainMetadata.new(response["domain_metadata"])
+    end
+
     def time_to_read(words_per_minute: DEFAULT_WORDS_PER_MINUTE)
       return nil unless response["word_count"]
       return nil if word_count == 0
