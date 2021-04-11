@@ -2,6 +2,8 @@ require "json"
 
 module Pocket
   class Article
+    # This number is comes from Pocket’s VP and General Manager Matt Koidin
+    # https://www.theverge.com/2021/3/12/22327497/pocket-app-sort-by-reading-time-work-commute
     DEFAULT_WORDS_PER_MINUTE = 220
 
     attr_reader :response
@@ -124,7 +126,7 @@ module Pocket
     def time_to_read(words_per_minute: DEFAULT_WORDS_PER_MINUTE)
       return nil unless response["word_count"]
       return nil if word_count == 0
-      word_count.fdiv(words_per_minute).round
+      word_count.fdiv(words_per_minute).ceil
     end
 
     def time_to_read_category

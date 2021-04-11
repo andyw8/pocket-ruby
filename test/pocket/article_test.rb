@@ -162,7 +162,7 @@ module Pocket
     end
 
     test "time_to_read with custom value" do
-      assert_equal 29, article.time_to_read(words_per_minute: 110)
+      assert_equal 30, article.time_to_read(words_per_minute: 110)
     end
 
     test "time_to_read returns nil if word_count field not present" do
@@ -193,6 +193,11 @@ module Pocket
 
       parsed_response["word_count"] = "600"
       assert_equal "quick", article.time_to_read_category
+    end
+
+    test "time_to_read returns 1 for very short articles" do
+      parsed_response["word_count"] = "1"
+      assert_equal 1, article.time_to_read
     end
 
     private
