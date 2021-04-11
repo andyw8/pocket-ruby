@@ -133,13 +133,13 @@ module Pocket
       return nil if time_to_read.nil?
 
       if time_to_read >= 21
-        'very_long'
+        "very_long"
       elsif time_to_read >= 11
-        'long'
+        "long"
       elsif time_to_read >= 6
-        'medium'
+        "medium"
       else
-        'quick'
+        "quick"
       end
     end
   end
