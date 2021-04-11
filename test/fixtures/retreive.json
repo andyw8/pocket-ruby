@@ -56,5 +56,10 @@
            "name":"Stephen King",
            "url":"https://example.com/author"
         }
-     }
+     },
+     "domain_metadata":{
+        "name": "The Verge",
+        "logo": "https://logo.clearbit.com/theverge.com?size=800",
+        "greyscale_logo": "https://logo.clearbit.com/theverge.com?size=800&greyscale=true"
+    }
 }
