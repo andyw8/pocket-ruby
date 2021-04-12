@@ -10,6 +10,8 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency("faraday", [">= 0.7"])
   s.add_runtime_dependency("faraday_middleware")
   s.add_runtime_dependency("multi_json", ">= 1.0.3", "~> 1.0")
+  s.add_runtime_dependency("dry-types")
+  s.add_runtime_dependency("dry-struct")
   s.authors = ["Turadg Aleahmad", "Jason Ng PT", "Andy Waite"]
   s.description = "A Ruby wrapper for the Pocket API v3 (Add, Modify and Retrieve)"
   s.email = ["turadg@aleahmad.net", "me@jasonngpt.com"]
