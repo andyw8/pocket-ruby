@@ -34,5 +34,6 @@ Below are some aspects of the Pocket API that aren't covered in the official doc
   * `listen_duration_estimate`
   * `time_to_read`
   * `sort_id`
+  * `lang` ([ISO_639-1](https://en.wikipedia.org/wiki/ISO_639-1)?)
 * Every integer value is returned as a string, *except* for `time_to_read`, `listen_duration_estimate` and `sort_id`.
 * The `time_to_read` is in minutes, but `listen_duration_estimate` is in seconds.
