@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.3.0] - 2021-04-11
+
 - Hand article with missing `excerpt`. ([#63](https://github.com/turadg/pocket-ruby/pull/63))
 - Add support for `domain_metadata` in Article response. ([#57](https://github.com/turadg/pocket-ruby/pull/57))
 - Add `time_to_read` field to `Pocket::Article`.
