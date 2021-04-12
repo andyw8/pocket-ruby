@@ -41,6 +41,7 @@ module Pocket
     end
 
     def excerpt
+      return nil unless response["excerpt"]
       response.fetch("excerpt")
     end
 

@@ -40,6 +40,11 @@ module Pocket
       assert_include article.excerpt, "list of things"
     end
 
+    test "excerpt is nil if field not present" do
+      parsed_response.delete("excerpt")
+      assert_nil article.excerpt
+    end
+
     test "article?" do
       assert article.article?
     end
