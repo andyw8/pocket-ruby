@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Simplify internal structure for `Client` class and modules.
+
 ## [0.3.0] - 2021-04-11
 
 - Hand article with missing `excerpt`. ([#63](https://github.com/turadg/pocket-ruby/pull/63))
