@@ -1,3 +1,4 @@
+# typed: true
 require File.expand_path("../connection", __FILE__)
 require File.expand_path("../oauth", __FILE__)
 

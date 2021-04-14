@@ -1,3 +1,4 @@
+# typed: false
 require "faraday_middleware"
 Dir[File.expand_path("../../faraday/*.rb", __FILE__)].sort.each { |f| require f }
 

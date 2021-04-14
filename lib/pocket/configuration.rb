@@ -1,3 +1,4 @@
+# typed: false
 require "faraday"
 require File.expand_path("../version", __FILE__)
 
