@@ -1,5 +1,6 @@
 ## [Unreleased]
 
+- Remove unnecessary use of `method_missing`. ([#71](https://github.com/turadg/pocket-ruby/pull/71))
 - Simplify internal structure for `Client` class and modules.
 
 ## [0.3.0] - 2021-04-11

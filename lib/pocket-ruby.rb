@@ -15,15 +15,4 @@ module Pocket
   def self.client(options = {})
     Pocket::Client.new(options)
   end
-
-  # Delegate to Pocket::Client
-  def self.method_missing(method, *args, &block)
-    return super unless client.respond_to?(method)
-    client.send(method, *args, &block)
-  end
-
-  # Delegate to Pocket::Client
-  def self.respond_to_missing?(method)
-    client.respond_to?(method) || super
-  end
 end
