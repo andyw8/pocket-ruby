@@ -16,6 +16,11 @@ module Pocket
       assert_equal "http://www.grantland.com/blog/the-triangle/post/_/id/38347/ryder-cup-preview?given", article.given_url
     end
 
+    test "given_url returns nil if not present" do
+      parsed_response.delete("given_url")
+      assert_nil article.given_url
+    end
+
     test "resolved_url" do
       assert_equal "http://www.grantland.com/blog/the-triangle/post/_/id/38347/ryder-cup-preview?resolved", article.resolved_url
     end

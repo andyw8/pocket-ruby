@@ -17,6 +17,7 @@ module Pocket
     end
 
     def given_url
+      return nil unless response["given_url"]
       response.fetch("given_url")
     end
 
