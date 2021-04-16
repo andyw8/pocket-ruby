@@ -1,7 +1,7 @@
 require "test_helper"
 
 module Pocket
-  class VersionTest < Test::Unit::TestCase
+  class ArticleTest < Test::Unit::TestCase
     test "from_json" do
       json_string = File.read("test/fixtures/retreive.json")
       article = Pocket::Article.from_json(json_string)
@@ -14,6 +14,14 @@ module Pocket
 
     test "given_url" do
       assert_equal "http://www.grantland.com/blog/the-triangle/post/_/id/38347/ryder-cup-preview?given", article.given_url
+    end
+
+    test "given_url raises" do
+      json_string = File.read("test/fixtures/deleted_article.json")
+      article = Pocket::Article.from_json(json_string)
+      assert_raises Pocket::Article::FieldUnavailableOnDeletedArticle do
+        article.given_url
+      end
     end
 
     test "resolved_url" do

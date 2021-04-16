@@ -2,6 +2,7 @@ require "json"
 
 module Pocket
   class Article
+    class FieldUnavailableOnDeletedArticle < Pocket::Error; end
     attr_reader :response
 
     def initialize(response)
@@ -17,6 +18,7 @@ module Pocket
     end
 
     def given_url
+      ensure_available
       response.fetch("given_url")
     end
 
@@ -143,6 +145,10 @@ module Pocket
       else
         "quick"
       end
+    end
+
+    def ensure_available
+      raise Pocket::Article::FieldUnavailableOnDeletedArticle if status == 2
     end
   end
 end
