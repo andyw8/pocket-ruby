@@ -1,7 +1,7 @@
 require "test_helper"
 
 module Pocket
-  class VersionTest < Test::Unit::TestCase
+  class ArticleTest < Test::Unit::TestCase
     test "from_json" do
       json_string = File.read("test/fixtures/retreive.json")
       article = Pocket::Article.from_json(json_string)
