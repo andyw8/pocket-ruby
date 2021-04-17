@@ -46,6 +46,7 @@ module Pocket
     end
 
     def article?
+      return false unless response["is_article"]
       Integer(response.fetch("is_article")) == 1
     end
 

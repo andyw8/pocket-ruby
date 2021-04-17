@@ -63,6 +63,11 @@ module Pocket
       assert @article.article?
     end
 
+    test "article? returns false if `is_article` field not present" do
+      parsed_response.delete("is_article")
+      refute @article.article?
+    end
+
     test "has_image?" do
       assert @article.has_image?
     end
