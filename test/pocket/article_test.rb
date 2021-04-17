@@ -24,12 +24,22 @@ module Pocket
       assert_equal "http://www.grantland.com/blog/the-triangle/post/_/id/38347/ryder-cup-preview?resolved", @article.resolved_url
     end
 
+    test "resolved_url is nil is field not present" do
+      parsed_response.delete("resolved_url")
+      assert_nil @article.resolved_url
+    end
+
     test "given_title" do
       assert_equal "The Massive Ryder Cup Preview - The Triangle Blog - Grantland", @article.given_title
     end
 
     test "resolved_title" do
       assert_equal "The Massive Ryder Cup Preview", @article.resolved_title
+    end
+
+    test "resolved_title is nil is field not present" do
+      parsed_response.delete("resolved_title")
+      assert_nil @article.resolved_title
     end
 
     test "favorite? is false is field is '0'" do
