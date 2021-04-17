@@ -21,7 +21,7 @@ module Pocket
     end
 
     def resolved_url
-      response.fetch("resolved_url")
+      response.fetch("resolved_url", nil)
     end
 
     def given_title
@@ -29,7 +29,7 @@ module Pocket
     end
 
     def resolved_title
-      response.fetch("resolved_title")
+      response.fetch("resolved_title", nil)
     end
 
     def favorite?
