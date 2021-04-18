@@ -1,8 +1,10 @@
 ## [Unreleased]
 
+## [0.3.0] - 2021-04-18
+
 - Fix Faraday error handling. ([#81](https://github.com/turadg/pocket-ruby/pull/81))
 - Don't assume `is_article` is present ([#78](https://github.com/turadg/pocket-ruby/pull/78)).
-- Handle article with missing `resolved_url` or `resolved_title ([#77](https://github.com/turadg/pocket-ruby/pull/77)`
+- Handle article with missing `resolved_url` or `resolved_title` ([#77](https://github.com/turadg/pocket-ruby/pull/77))
 - Remove unnecessary use of `method_missing`. ([#71](https://github.com/turadg/pocket-ruby/pull/71))
 - Simplify internal structure for `Client` class and modules.
 
