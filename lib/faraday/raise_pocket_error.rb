@@ -16,11 +16,11 @@ module Faraday
     def on_complete(env)
       case env[:status]
       when 404
-        raise Faraday::Error::ResourceNotFound, response_values(env)
-      when 400...403
+        raise Faraday::ResourceNotFound, response_values(env)
+      when 400..403
         raise Pocket::Error, env[:response_headers]["X-Error"]
       when CLIENT_ERROR_STATUSES
-        raise Faraday::Error::ClientError, response_values(env)
+        raise Faraday::ClientError, response_values(env)
       end
     end
 

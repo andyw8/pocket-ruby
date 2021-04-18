@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     pocket-ruby (0.3.0)
-      faraday (>= 0.7)
+      faraday (>= 1.0)
       faraday_middleware
       multi_json (~> 1.0, >= 1.0.3)
 
