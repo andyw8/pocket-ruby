@@ -1,6 +1,6 @@
 ## [Unreleased]
 
-## [0.3.0] - 2021-04-18
+## [0.4.0] - 2021-04-18
 
 - Fix Faraday error handling. ([#81](https://github.com/turadg/pocket-ruby/pull/81))
 - Don't assume `is_article` is present ([#78](https://github.com/turadg/pocket-ruby/pull/78)).
