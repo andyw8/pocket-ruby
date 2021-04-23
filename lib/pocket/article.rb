@@ -1,4 +1,4 @@
-require "json"
+require "oj"
 
 module Pocket
   class Article
