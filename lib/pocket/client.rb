@@ -21,5 +21,9 @@ module Pocket
       response = connection.post("/v3/get", params)
       response.body
     end
+
+    def favorite(item_id)
+      modify([action: "favorite", item_id: item_id])
+    end
   end
 end
