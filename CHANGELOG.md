@@ -1,5 +1,6 @@
 ## [Unreleased]
 
+- Add `unfavorite` operation. ([#87](https://github.com/turadg/pocket-ruby/pull/87))
 - Add `favorite` operation. ([#86](https://github.com/turadg/pocket-ruby/pull/86))
 
 ## [0.4.0] - 2021-04-18
