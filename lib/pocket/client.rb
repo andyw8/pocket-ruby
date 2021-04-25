@@ -25,5 +25,9 @@ module Pocket
     def favorite(item_id)
       modify([action: "favorite", item_id: item_id])
     end
+
+    def unfavorite(item_id)
+      modify([action: "unfavorite", item_id: item_id])
+    end
   end
 end
