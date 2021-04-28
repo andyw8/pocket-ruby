@@ -2,6 +2,12 @@ require "faraday"
 require File.expand_path("../version", __FILE__)
 
 module Pocket
+  class DefaultLogger
+    def log(*)
+      # default logger does nothing
+    end
+  end
+
   # Defines constants and methods related to configuration
   module Configuration
     # An array of valid keys in the options hash when configuring a {Pocket::API}
@@ -13,7 +19,8 @@ module Pocket
       :redirect_uri,
       :format,
       :user_agent,
-      :proxy
+      :proxy,
+      :logger
     ].freeze
 
     # An array of valid request/response formats
@@ -83,6 +90,7 @@ module Pocket
       self.format = DEFAULT_FORMAT
       self.user_agent = DEFAULT_USER_AGENT
       self.proxy = DEFAULT_PROXY
+      self.logger = DefaultLogger
     end
   end
 end
