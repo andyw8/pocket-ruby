@@ -10,22 +10,11 @@ Rake::TestTask.new(:test) do |t|
   t.test_files = FileList["test/**/*_test.rb"]
 end
 
-task default: [:test, :standard]
+task default: [:test, :standard, :yard]
 
-namespace :doc do
+begin
   require "yard"
+  YARD::Rake::YardocTask.new
 rescue LoadError
   # ignore
-else
-  YARD::Rake::YardocTask.new do |task|
-    task.files = ["HISTORY.mkd", "LICENSE.mkd", "lib/**/*.rb"]
-    task.options = [
-      "--protected",
-      "--output-dir", "doc/yard",
-      "--tag", "format:Supported formats",
-      "--tag", "authenticated:Requires Authentication",
-      "--tag", "rate_limited:Rate Limited",
-      "--markup", "markdown"
-    ]
-  end
 end
