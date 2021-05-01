@@ -1,9 +1,6 @@
 --no-private
 --protected
---tag format:"Supported formats"
---tag authenticated:"Requires Authentication"
---tag rate_limited:"Rate Limited"
 --markup markdown
+--output-dir doc/yard
 -
-HISTORY.mkd
-LICENSE.mkd
+LICENSE.md
