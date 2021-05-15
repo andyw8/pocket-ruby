@@ -9,6 +9,8 @@ require File.expand_path("../pocket/image", __FILE__)
 
 module Pocket
   extend Configuration
+  extend Connection
+  extend OAuth
 
   # Alias for Pocket::Client.new
   #
