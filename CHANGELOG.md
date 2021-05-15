@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 - Add `Pocket::Image` class. ([#90](https://github.com/turadg/pocket-ruby/pull/90))
+- Fix demo server. ([#93](https://github.com/turadg/pocket-ruby/pull/33))
 - Fix docs generation. ([#89](https://github.com/turadg/pocket-ruby/pull/89))
 - Add `unfavorite` operation. ([#87](https://github.com/turadg/pocket-ruby/pull/87))
 - Add `favorite` operation. ([#86](https://github.com/turadg/pocket-ruby/pull/86))
