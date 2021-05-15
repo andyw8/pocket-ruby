@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [0.5.0] - 2021-05-15
+
 - Use Sinatra 2. ([#92](https://github.com/turadg/pocket-ruby/pull/92))
 - Add `Pocket::Image` class. ([#90](https://github.com/turadg/pocket-ruby/pull/90))
 - Fix demo server. ([#93](https://github.com/turadg/pocket-ruby/pull/33))
