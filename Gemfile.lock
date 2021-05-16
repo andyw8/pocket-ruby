@@ -7,7 +7,7 @@ PATH
       multi_json (~> 1.0, >= 1.0.3)
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
