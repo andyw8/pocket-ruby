@@ -3,14 +3,24 @@ name: Ruby
 on: [push,pull_request]
 
 jobs:
-  build:
+  build-matrix:
     runs-on: ubuntu-latest
+    steps: # https://michaelheap.com/dynamic-matrix-generation-github-actions/
+    - id: set-matrix
+      run: echo "::set-output name=version_matrix::$(curl https://endoflife.date/api/ruby.json | jq -c '[.[] | select(.eol > (now | strftime("%Y-%m-%d"))) | .cycle]')"
+    outputs:
+      version_matrix: ${{ steps.set-matrix.outputs.version_matrix }}
+  ci:
+    needs: build-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: ${{ fromJson(needs.build-matrix.outputs.version_matrix) }}
     steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6.6
+        ruby-version: ${{ matrix.version }}
         bundler-cache: true
     - name: Run the default task
       run: bundle exec rake
