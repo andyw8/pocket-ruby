@@ -5,7 +5,14 @@ module Pocket
   # @private
   class API
     # @private
-    attr_accessor(*Configuration::VALID_OPTIONS_KEYS)
+    attr_accessor :adapter,
+      :consumer_key,
+      :access_token,
+      :endpoint,
+      :redirect_uri,
+      :format,
+      :user_agent,
+      :proxy
 
     # Creates a new API
     def initialize(options = {})
