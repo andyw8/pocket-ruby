@@ -1,7 +1,7 @@
 require "test_helper"
 
 module Pocket
-  class ArticleTest < Test::Unit::TestCase
+  class ArticleTest < ActiveSupport::TestCase
     setup do
       @article = Pocket::Article.new(parsed_response)
     end
@@ -51,7 +51,7 @@ module Pocket
     end
 
     test "excerpt" do
-      assert_include @article.excerpt, "list of things"
+      assert_includes @article.excerpt, "list of things"
     end
 
     test "excerpt is nil if field not present" do
