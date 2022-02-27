@@ -32,31 +32,31 @@ GEM
     multipart-post (2.1.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    parallel (1.20.1)
-    parser (3.0.0.0)
+    parallel (1.21.0)
+    parser (3.1.1.0)
       ast (~> 2.4.1)
     power_assert (2.0.0)
     public_suffix (4.0.6)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
-    rainbow (3.0.0)
+    rainbow (3.1.1)
     rake (13.0.3)
-    regexp_parser (2.1.1)
+    regexp_parser (2.2.1)
     rexml (3.2.5)
-    rubocop (1.11.0)
+    rubocop (1.25.1)
       parallel (~> 1.10)
-      parser (>= 3.0.0.0)
+      parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml
-      rubocop-ast (>= 1.2.0, < 2.0)
+      rubocop-ast (>= 1.15.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.4.1)
-      parser (>= 2.7.1.5)
-    rubocop-performance (1.10.1)
-      rubocop (>= 0.90.0, < 2.0)
+    rubocop-ast (1.16.0)
+      parser (>= 3.1.1.0)
+    rubocop-performance (1.13.2)
+      rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.4)
@@ -71,13 +71,13 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
-    standard (1.0.4)
-      rubocop (= 1.11.0)
-      rubocop-performance (= 1.10.1)
+    standard (1.7.2)
+      rubocop (= 1.25.1)
+      rubocop-performance (= 1.13.2)
     test-unit (3.4.0)
       power_assert
     tilt (2.0.10)
-    unicode-display_width (2.0.0)
+    unicode-display_width (2.1.0)
     webmock (3.12.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -85,6 +85,7 @@ GEM
     yard (0.9.26)
 
 PLATFORMS
+  universal-darwin-21
   x86_64-darwin-19
   x86_64-darwin-20
   x86_64-linux
@@ -101,4 +102,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.2.8
+   2.3.4
