@@ -14,7 +14,7 @@ module Pocket
     def get_code(options = {})
       params = access_token_params.merge(options)
       response = connection.post "oauth/request", params
-      results = Hash[URI.decode_www_form(response.body)]
+      results = URI.decode_www_form(response.body).to_h
       results["code"]
     end
 
@@ -22,7 +22,7 @@ module Pocket
     def get_access_token(code, options = {})
       params = access_token_params.merge(code: code).merge(options)
       response = connection.post "oauth/authorize", params
-      results = Hash[URI.decode_www_form(response.body)]
+      results = URI.decode_www_form(response.body).to_h
       results["access_token"]
     end
 
@@ -30,7 +30,7 @@ module Pocket
     def get_result(code, options = {})
       params = access_token_params.merge(code: code).merge(options)
       response = connection.post "oauth/authorize", params
-      Hash[URI.decode_www_form(response.body)]
+      URI.decode_www_form(response.body).to_h
     end
 
     private
