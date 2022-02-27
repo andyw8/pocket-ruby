@@ -1,7 +1,7 @@
 require "test_helper"
-require "webmock/test_unit"
+require "webmock/minitest"
 
-class ClientTest < Test::Unit::TestCase
+class ClientTest < ActiveSupport::TestCase
   test "retrieve" do
     stub_request(:post, "https://getpocket.com/v3/get")
       .with(

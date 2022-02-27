@@ -8,4 +8,6 @@ end
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
 require "pocket-ruby"
 
-require "test-unit"
+require "active_support"
+require "active_support/test_case"
+require "minitest/autorun"
