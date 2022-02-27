@@ -54,7 +54,14 @@ module Pocket
     DEFAULT_USER_AGENT = "Pocket Ruby Gem #{Pocket::VERSION}".freeze
 
     # @private
-    attr_accessor(*VALID_OPTIONS_KEYS)
+    attr_accessor :adapter,
+      :consumer_key,
+      :access_token,
+      :endpoint,
+      :redirect_uri,
+      :format,
+      :user_agent,
+      :proxy
 
     # When this module is extended, set all configuration options to their default values
     def self.extended(base)
