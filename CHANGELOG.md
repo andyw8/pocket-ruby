@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Set Faraday version constraint ([#104](https://github.com/turadg/pocket-ruby/pull/104))
+
 ## [0.5.0] - 2021-05-15
 
 - Use Sinatra 2. ([#92](https://github.com/turadg/pocket-ruby/pull/92))
