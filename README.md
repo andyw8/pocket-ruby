@@ -7,20 +7,20 @@ Ruby API for v3 of the [Pocket API](http://getpocket.com/developer/docs/overview
 
 # Usage
 
-Just clone the repo here and refer to the demo-server.rb file for examples on how to interact with the Pocket API.
+Clone the repo and refer to `demo-server.rb` for examples on how to interact with the Pocket API.
 
 ```sh
-	git clone
-	cd pocket-ruby
-	bundle install
-	ruby demo-server.rb
+git clone
+cd pocket-ruby
+bundle install
+ruby demo-server.rb
 ```
 
 *Note:* Changes to the `demo-server.rb` will require a restart to take effect (or you can use [rerun](https://github.com/alexch/rerun)).
 
 Pocket-Ruby can be installed via the gem, ```gem install pocket-ruby```
 
-Or via bundler, ```gem 'pocket-ruby'```
+Or via bundler, `gem 'pocket-ruby'`
 
 ## Pocket API Notes
 
