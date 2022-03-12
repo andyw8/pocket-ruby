@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency("simplecov")
   s.add_development_dependency("webmock")
   s.add_development_dependency("yard")
-  s.add_runtime_dependency("faraday", ">= 1.0")
+  s.add_runtime_dependency("faraday", "~> 1.0")
   s.add_runtime_dependency("faraday_middleware")
   s.add_runtime_dependency("multi_json", ">= 1.0.3", "~> 1.0")
   s.authors = ["Turadg Aleahmad", "Jason Ng PT", "Andy Waite"]
