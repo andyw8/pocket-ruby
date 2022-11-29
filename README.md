@@ -40,3 +40,4 @@ Below are some aspects of the Pocket API that aren't covered in the official doc
 * Every integer value is returned as a string, *except* for `time_to_read`, `listen_duration_estimate` and `sort_id`.
 * The `time_to_read` is in minutes, but `listen_duration_estimate` is in seconds.
 * If an article's `status` is `"2"` ('should be deleted') then most fields will not be present.
+edit
