@@ -5,6 +5,8 @@ pocket-ruby
 
 Ruby API for v3 of the [Pocket API](http://getpocket.com/developer/docs/overview) (formerly Read It Later)
 
+Written and previously maintained by [@turadg](https://github.com/turadg).
+
 # Usage
 
 Clone the repo and refer to `demo-server.rb` for examples on how to interact with the Pocket API.
