@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.email = ["turadg@aleahmad.net", "me@jasonngpt.com"]
   s.executables = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.files = `git ls-files`.split("\n")
-  s.homepage = "https://github.com/turadg/pocket-ruby"
+  s.homepage = "https://github.com/andyw8/pocket-ruby"
   s.name = "pocket-ruby"
   s.platform = Gem::Platform::RUBY
   s.require_paths = ["lib"]
