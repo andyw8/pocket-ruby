@@ -1,4 +1,4 @@
-# typed: false
+# typed: true
 module Faraday
   #   HTTP Status X-Error-Code  X-Error
   # 400 138 Missing consumer key.
