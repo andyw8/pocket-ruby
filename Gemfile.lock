@@ -88,6 +88,8 @@ GEM
     rubocop-performance (1.13.2)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
+    rubocop-sorbet (0.6.11)
+      rubocop (>= 0.90.0)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
     simplecov (0.21.2)
@@ -153,6 +155,7 @@ DEPENDENCIES
   multi_xml
   pocket-ruby!
   rake
+  rubocop-sorbet
   simplecov
   sinatra (~> 2)
   sorbet
