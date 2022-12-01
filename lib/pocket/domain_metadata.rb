@@ -1,3 +1,4 @@
+# typed: false
 module Pocket
   class DomainMetadata
     def initialize(response)

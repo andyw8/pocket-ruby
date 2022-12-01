@@ -1,3 +1,4 @@
+# typed: false
 module Pocket
   # Defines HTTP request methods
   module OAuth

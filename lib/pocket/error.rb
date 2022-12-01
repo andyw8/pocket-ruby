@@ -1,3 +1,4 @@
+# typed: false
 module Pocket
   # Custom error class for rescuing from all Pocket errors
   class Error < StandardError; end

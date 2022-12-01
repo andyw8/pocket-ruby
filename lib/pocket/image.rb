@@ -1,3 +1,4 @@
+# typed: false
 module Pocket
   class Image
     attr_reader :response

@@ -1,3 +1,4 @@
+# typed: false
 module Pocket
   # Wrapper for the Pocket REST API
   class Client < API

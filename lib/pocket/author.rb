@@ -1,3 +1,4 @@
+# typed: false
 module Pocket
   class Author
     def initialize(response)
