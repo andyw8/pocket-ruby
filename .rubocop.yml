@@ -6,6 +6,7 @@ inherit_mode:
 
 require:
   - standard
+  - rubocop-sorbet
 
 inherit_gem:
   standard: config/ruby-3.0.yml
