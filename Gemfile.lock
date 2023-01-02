@@ -54,14 +54,14 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    mustermann (1.1.1)
+    mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     parallel (1.21.0)
     parser (3.1.1.0)
       ast (~> 2.4.1)
     public_suffix (4.0.6)
-    rack (2.2.4)
-    rack-protection (2.2.0)
+    rack (2.2.5)
+    rack-protection (3.0.5)
       rack
     rainbow (3.1.1)
     rake (13.0.3)
@@ -89,15 +89,15 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.2)
-    sinatra (2.2.0)
-      mustermann (~> 1.0)
-      rack (~> 2.2)
-      rack-protection (= 2.2.0)
+    sinatra (3.0.5)
+      mustermann (~> 3.0)
+      rack (~> 2.2, >= 2.2.4)
+      rack-protection (= 3.0.5)
       tilt (~> 2.0)
     standard (1.7.2)
       rubocop (= 1.25.1)
       rubocop-performance (= 1.13.2)
-    tilt (2.0.10)
+    tilt (2.0.11)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
@@ -123,7 +123,7 @@ DEPENDENCIES
   pocket-ruby!
   rake
   simplecov
-  sinatra (~> 2)
+  sinatra (~> 3)
   standard
   webmock
   yard
