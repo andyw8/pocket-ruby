@@ -5,7 +5,7 @@ pocket-ruby
 
 Ruby API for v3 of the [Pocket API](http://getpocket.com/developer/docs/overview) (formerly Read It Later)
 
-Written and previously maintained by [@turadg](https://github.com/turadg).
+Written by and previously maintained by [@turadg](https://github.com/turadg).
 
 # Usage
 
