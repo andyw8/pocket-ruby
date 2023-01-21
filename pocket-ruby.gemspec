@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency("multi_xml")
   s.add_development_dependency("rake")
   s.add_development_dependency("standard")
-  s.add_development_dependency("activesupport", "~> 6.1") # move to v7 once support for Ruby 2.6 is dropped
+  s.add_development_dependency("activesupport", "~> 7.0") # move to v7 once support for Ruby 2.6 is dropped
   s.add_development_dependency("simplecov")
   s.add_development_dependency("webmock")
   s.add_development_dependency("yard")
