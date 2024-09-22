@@ -3,8 +3,8 @@ PATH
   specs:
     pocket-ruby (0.5.1)
       faraday
-      faraday_middleware
-      multi_json (~> 1.0, >= 1.0.3)
+      multi_json (>= 1.15.0)
+      simple_oauth
 
 GEM
   remote: https://rubygems.org/
@@ -32,31 +32,12 @@ GEM
       rexml
     docile (1.4.1)
     drb (2.2.1)
-    faraday (1.10.3)
-      faraday-em_http (~> 1.0)
-      faraday-em_synchrony (~> 1.0)
-      faraday-excon (~> 1.1)
-      faraday-httpclient (~> 1.0)
-      faraday-multipart (~> 1.0)
-      faraday-net_http (~> 1.0)
-      faraday-net_http_persistent (~> 1.0)
-      faraday-patron (~> 1.0)
-      faraday-rack (~> 1.0)
-      faraday-retry (~> 1.0)
-      ruby2_keywords (>= 0.0.4)
-    faraday-em_http (1.0.0)
-    faraday-em_synchrony (1.0.0)
-    faraday-excon (1.1.0)
-    faraday-httpclient (1.0.1)
-    faraday-multipart (1.0.4)
-      multipart-post (~> 2)
-    faraday-net_http (1.0.2)
-    faraday-net_http_persistent (1.2.0)
-    faraday-patron (1.0.0)
-    faraday-rack (1.0.0)
-    faraday-retry (1.0.3)
-    faraday_middleware (1.2.0)
-      faraday (~> 1.0)
+    faraday (2.12.0)
+      faraday-net_http (>= 2.0, < 3.4)
+      json
+      logger
+    faraday-net_http (3.3.0)
+      net-http
     hashdiff (1.1.1)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
@@ -68,9 +49,10 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.7.1)
       bigdecimal (~> 3.1)
-    multipart-post (2.4.1)
     mustermann (3.0.3)
       ruby2_keywords (~> 0.0.1)
+    net-http (0.4.1)
+      uri
     parallel (1.26.3)
     parser (3.3.5.0)
       ast (~> 2.4.1)
@@ -104,6 +86,7 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     securerandom (0.3.1)
+    simple_oauth (0.3.1)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -131,6 +114,7 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.6.0)
+    uri (0.13.1)
     webmock (3.23.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -142,7 +126,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (~> 7.0)
+  activesupport (>= 7)
   multi_xml
   pocket-ruby!
   rake
@@ -153,4 +137,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.5.9
+   2.5.19

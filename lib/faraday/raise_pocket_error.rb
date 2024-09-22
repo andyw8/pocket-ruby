@@ -10,7 +10,7 @@ module Faraday
   # 50X 199 Pocket server issue.
   #
   # @see http://getpocket.com/developer/docs/authentication
-  class Response::RaisePocketError < Response::Middleware
+  class Response::RaisePocketError < Faraday::Response
     CLIENT_ERROR_STATUSES = 400...600
 
     def on_complete(env)

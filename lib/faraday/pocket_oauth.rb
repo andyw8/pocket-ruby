@@ -3,16 +3,17 @@ require "faraday"
 # @private
 module FaradayMiddleware
   # @private
-  class PocketOAuth < Faraday::Middleware
+  class PocketOAuth < Faraday::Response::Middleware
     def call(env)
-      env[:body] = {} if env[:body].nil?
-      env[:body] = env[:body].merge(consumer_key: @consumer_key)
+      env.params[:consumer_key] = @consumer_key if env.params.nil? || !env.params.has_key?(:consumer_key)
 
       if @access_token
-        env[:body] = env[:body].merge(access_token: @access_token)
+        env.params[:access_token] = @access_token
       end
 
-      @app.call env
+      @app.call(env) do |scoped_env|
+        scoped_env[:params] = env.params.dup
+      end
     end
 
     def initialize(app, consumer_key, access_token = nil)
