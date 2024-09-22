@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pocket-ruby (0.5.1)
+    pocket-ruby (0.6.1)
       faraday
       multi_json (>= 1.15.0)
       simple_oauth

@@ -13,7 +13,8 @@ module Pocket
     def connection(_raw: false)
       Faraday::Connection.new(configure_options) do |conn|
         conn.response :json, content_type: /\bjson$/
-        conn.use :json
+        # req.headers[:content_type] = 'application/json'
+        # conn.use :json
         conn.use Faraday::OAuth, consumer_key, access_token
         conn.use Faraday::Response::RaiseError
 
