@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 require 'faraday'
-# require 'faraday_middleware'
-
+require 'oauth_shim.rb'
 Dir[File.expand_path('faraday/*.rb', __dir__)].sort.each { |f| require f }
 
 module Pocket
@@ -15,7 +14,7 @@ module Pocket
         conn.response :json, content_type: /\bjson$/
         # req.headers[:content_type] = 'application/json'
         # conn.use :json
-        conn.use Faraday::OAuth, consumer_key, access_token
+        conn.use OauthShim, consumer_key, access_token
         conn.use Faraday::Response::RaiseError
 
         conn.adapter Faraday.default_adapter
