@@ -1,6 +1,5 @@
 require File.expand_path("../connection", __FILE__)
 require File.expand_path("../oauth", __FILE__)
-require File.expand_path("../faraday/o_auth.rb", __FILE__)
 
 module Pocket
   # @private
