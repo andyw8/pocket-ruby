@@ -1,3 +1,5 @@
+require File.expand_path("../faraday/pocket_oauth", __FILE__)
+
 require File.expand_path("../pocket/error", __FILE__)
 require File.expand_path("../pocket/configuration", __FILE__)
 require File.expand_path("../pocket/api", __FILE__)

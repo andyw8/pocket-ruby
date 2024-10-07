@@ -1,10 +1,9 @@
 PATH
   remote: .
   specs:
-    pocket-ruby (0.6.1)
+    pocket-ruby (0.6.0)
       faraday
       multi_json (>= 1.15.0)
-      simple_oauth
 
 GEM
   remote: https://rubygems.org/
@@ -86,7 +85,6 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     securerandom (0.3.1)
-    simple_oauth (0.3.1)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -122,8 +120,13 @@ GEM
     yard (0.9.37)
 
 PLATFORMS
+  arm64-darwin-22
   arm64-darwin-23
   ruby
+  universal-darwin-21
+  x86_64-darwin-19
+  x86_64-darwin-20
+  x86_64-linux
 
 DEPENDENCIES
   activesupport (>= 7)
@@ -137,4 +140,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.5.19
+   2.5.21
