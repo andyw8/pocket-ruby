@@ -1,4 +1,5 @@
 ## [0.6.0] - 2024-10-07
+- Upgrade Ruby to Version 3.3.5
 - Upgrade Faraday to Version 2
 - Removes faraday_middleware as it is no longer supported
 - Updates the Connection builder to not use the calls specific to faraday_middleware
