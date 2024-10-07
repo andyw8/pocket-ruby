@@ -1,3 +1,10 @@
+## [0.6.0] - 2024-10-07
+- Upgrade Faraday to Version 2
+- Removes faraday_middleware as it is no longer supported
+- Updates the Connection builder to not use the calls specific to faraday_middleware
+- Upgrade activesupport to 7.2
+- Upgrade Sinatra to version 3
+
 ## [Unreleased]
 
 - Ownership transferred to `@andyw8` ([#108](https://github.com/turadg/pocket-ruby/pull/108))
