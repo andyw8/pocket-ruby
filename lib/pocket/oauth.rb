@@ -13,7 +13,7 @@ module Pocket
     # Return a Pocket code
     def get_code(options = {})
       params = access_token_params.merge(options)
-      response = connection.post "oauth/request", params
+      response = connection.post("oauth/request", params)
       results = URI.decode_www_form(response.body).to_h
       results["code"]
     end
@@ -21,7 +21,7 @@ module Pocket
     # Return an access token from authorization
     def get_access_token(code, options = {})
       params = access_token_params.merge(code: code).merge(options)
-      response = connection.post "oauth/authorize", params
+      response = connection.post("oauth/authorize", params)
       results = URI.decode_www_form(response.body).to_h
       results["access_token"]
     end
@@ -29,7 +29,7 @@ module Pocket
     # Return result from authorization
     def get_result(code, options = {})
       params = access_token_params.merge(code: code).merge(options)
-      response = connection.post "oauth/authorize", params
+      response = connection.post("oauth/authorize", params)
       URI.decode_www_form(response.body).to_h
     end
 
