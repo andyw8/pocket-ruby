@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'faraday'
-Dir[File.expand_path('faraday/*.rb', __dir__)].sort.each { |f| require f }
+require "faraday"
+Dir[File.expand_path("faraday/*.rb", __dir__)].sort.each { |f| require f }
 
 module Pocket
   # @private
@@ -22,9 +22,9 @@ module Pocket
 
     def configure_options
       {
-        headers: { 'User-Agent' => user_agent, 'Content-Type' => 'application/json' },
+        headers: {"User-Agent" => user_agent, "Content-Type" => "application/json"},
         proxy: proxy,
-        ssl: { verify: false },
+        ssl: {verify: false},
         url: endpoint
       }
     end
