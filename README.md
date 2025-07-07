@@ -1,6 +1,6 @@
 This repo is archived due to the [shutdown of Pocket](https://getpocket.com/).
 
-The [readwise](https://github.com/joshbeckman/readwise-ruby) may be a good alternative.
+The [readwise](https://github.com/joshbeckman/readwise-ruby) gem may be a good alternative.
 
 ---
 
